@@ -1,6 +1,6 @@
-# 🌙 hypr-nightlight
+# 🌙 HNT
 
-سكربت بسيط لـ **Hyprland** يتيح التنقل بين درجات حرارة لونية مختلفة عبر `gammastep` — بضغطة مفتاح واحدة.
+**HNT** اختصار ل Hyprland Nightlight Toggle بسيط لـ **Hyprland** يتيح التنقل بين درجات حرارة لونية مختلفة عبر `gammastep` — بضغطة مفتاح واحدة.
 
 ---
 
@@ -23,8 +23,8 @@ sudo pacman -S gammastep libnotify
 ```bash
 git clone https://github.com/0xdya/hypr-nightlight.git
 cd hypr-nightlight
-chmod +x toggle-nightlight.sh
-cp toggle-nightlight.sh ~/.config/hypr/scripts/
+chmod +x HNT.sh
+cp HNT.sh ~/.config/hypr/scripts/
 ```
 
 ---
@@ -34,7 +34,7 @@ cp toggle-nightlight.sh ~/.config/hypr/scripts/
 أضف هذا السطر إلى `~/.config/hypr/keybindings.conf`:
 
 ```ini
-bind = , F12, exec, ~/.config/hypr/scripts/toggle-nightlight.sh
+bind = , F12, exec, ~/.config/hypr/scripts/HNT.sh
 ```
 
 غيّر `F12` لأي مفتاح تريده.
