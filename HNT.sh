@@ -20,5 +20,5 @@ sleep 0.2
 if [ "$next" -ne 0 ]; then
     gammastep -O "${STATES[$next]}" &
 fi
-
+# تقدر هنا تغير لنظام الاشعارات الخاص بك
 notify-send "Gammastep" "${NAMES[$next]} — ${STATES[$next]}K"
