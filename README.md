@@ -1,15 +1,17 @@
 # 🌙 HNT
 
-سكربت بسيط موجه لمسستخدمين هايبرلاند، **HNT** هو اختصار ل **Hyprland Nightlight Toggle** يتيح التنقل بين درجات حرارة لونية مختلفة عبر `gammastep` — بضغطة مفتاح واحدة.
+سكربت بسيط موجه لمسستخدمين هايبرلاند، (يشتغل على أي واجهة de/wm)
+
+اسم **HNT** هو اختصار ل **Hyprland Nightlight Toggle** يتيح التنقل بين درجات حرارة لونية مختلفة عبر `gammastep` باختصار كيبورد واحد
 
 ---
 
 ## المتطلبات
 
-- [`gammastep`](https://gitlab.com/chinstrap/gammastep)
-- [`libnotify`](https://gitlab.gnome.org/GNOME/libnotify) — لإشعارات `notify-send`
-- Hyprland
+- [`gammastep`](https://gitlab.com/chinstrap/gammastep) (لتحكم فدرجة حرارة الألوان)
+- [`libnotify`](https://gitlab.gnome.org/GNOME/libnotify) (لارسال الاشعارات، يمكنك استبداله المهم عدل ملف السكربت بعدها)
 
+  
 على Arch:
 
 ```bash
@@ -18,7 +20,7 @@ sudo pacman -S gammastep libnotify
 
 ---
 
-## التثبيت
+## التثبيت (لهايبرلاند)
 
 ```bash
 git clone https://github.com/0xdya/HNT.git
@@ -29,8 +31,7 @@ cp HNT.sh ~/.config/hypr/scripts/
 
 ---
 
-## الإعداد في Hyprland
-
+## الإعداد
 أضف هذا السطر إلى `~/.config/hypr/keybindings.conf`:
 
 ```ini
@@ -46,11 +47,11 @@ bind = , F12, exec, ~/.config/hypr/scripts/HNT.sh
 | الحالة | درجة الحرارة | الوصف |
 |--------|-------------|-------|
 | إيقاف | — | بدون تأثير |
-| ليلي | 3500K | برتقالي دافئ، مناسب قبل النوم |
-| دافئ | 4200K | دافئ معتدل |
+| ليلي | 3500K | برتقالي دافئ، مناسب للاسستخدام الليلي |
+| معتدل | 4200K | مناسب للاستخدام الطويل |
 | خفيف | 5500K | تأثير خفيف بالكاد محسوس |
 
-كل ضغطة تنتقل للحالة التالية دورياً.
+كل ضغطة تنتقل للحالة التالية.
 
 ---
 
@@ -60,7 +61,7 @@ bind = , F12, exec, ~/.config/hypr/scripts/HNT.sh
 
 ```bash
 STATES=(0 3500 4200 5500)
-NAMES=("إيقاف" "ليلي" "دافئ" "خفيف")
+NAMES=("إيقاف" "ليلي" "معتدل" "خفيف")
 ```
 
 ---
